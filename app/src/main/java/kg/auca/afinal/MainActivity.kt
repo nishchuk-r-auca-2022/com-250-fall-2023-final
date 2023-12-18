@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     fun dateTimeScreen(view: View) {
         val intent = Intent(this, DateTime::class.java)
         val dateTime = Calendar.getInstance();
-        val format = SimpleDateFormat("H:m M/d/y ", Locale.getDefault())
+        val format = SimpleDateFormat("HH:mm MM/dd/yyyy ", Locale.getDefault())
         val dateAndTimeWithFormat = format.format(dateTime.time)
         intent.putExtra("dateTime", dateAndTimeWithFormat)
         startActivity(intent)
